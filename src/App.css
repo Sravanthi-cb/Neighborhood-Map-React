@@ -1,40 +1,42 @@
-
-#map {
-  height: 100vh;
-}
-
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
-
+/* ====================== Search ====================== */
+#search {
+  width: 100vw;
+	height:7vh;
+}
+/* ====================== Input ====================== */
+#input {
+  width: 100%;  
+  height: 100%;
+  padding: 20px 20px;
+}
+/* ====================== Leftcolumn ====================== */
 #leftcolumn {
-  width: 20%;  
+  width: 30%;  
   height: 100vh;
   position: fixed;
   margin: 0;
   padding: 0;
+  background-color: #02b3e4;
+  overflow: auto;
 }
-
-#list {
-  width:100%;
-  height:100%;
-  margin: 0;
-  padding: 0;
-}
-
-.poi {
-  width:100%;
+/* ====================== List ====================== */
+.poi {  
   cursor: pointer;
-  border: 1px solid grey;
-  margin: 0;
-  padding: 0;   
+  border: 1px solid grey;  
+  margin: 10px;
+  padding: 10px;
+  list-style: none;
+  background-color: #fff; 
+  
 }
-
+/* ====================== Map ====================== */
 #map {
-  width:80%;
-  border-style: solid;
-  background-color: #777;
+  width:70%;
   float: right;
+  height: 100vh;
 }
