@@ -1,24 +1,34 @@
 import React from 'react';
 
-class PoiListView extends React.Component {
+const PoiListView = ({ state: { pois, map, filteredPois } }) => {
 
-  handleClick(event, poi){
-    
-    let item = this.props.state.pois.get(poi)
-    let marker = item.marker
-    let infoWindow = item.infoWindow
-    infoWindow.open(this.props.state.map, marker)
-    marker.setAnimation(window.google.maps.Animation.BOUNCE)    
-    setTimeout(function(){ marker.setAnimation(null); }, 2*750);
+  function handleClick(event, poi) {
+
+    const item = pois.get(poi)
+    const { marker, infoWindow, map } = item
+    // close all info windows first
+    pois.forEach((poi) => poi.infoWindow.close())
+    infoWindow.open(map, marker)
+    marker.setAnimation(window.google.maps.Animation.BOUNCE)
+    setTimeout(() => {
+      marker.setAnimation(null);
+    }, 2 * 750);
   }
-  
-  render() {
-    return (
-        <div id="list">
-          {this.props.state.filteredPois.map((poi) => <div className="poi" key={poi} onClick = {(e) => this.handleClick(e, poi)}>{poi}</div>)}   
-        </div>          
-    );
-  }
+  return (
+    <div id="list">
+      {filteredPois.map((poi) =>
+        <div
+          className="poi"
+          key={poi}
+          onClick={(event) => handleClick(event, poi)}>
+          {poi}
+        </div>
+      )}
+      <div>
+        <img src={require('./fourSquare.png')} alt="Powered by Foursquare" />
+      </div>
+    </div>
+  );
 }
 
 export default PoiListView;

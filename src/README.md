@@ -25,5 +25,7 @@ The goal of the project was to use React, the Google Maps API, data used from a 
 - Four Square API
 - reactstrap
 
+## Resources
 
+- https://github.com/elharony/Udacity-P8-Neighborhood-Map-Project-Explained
 

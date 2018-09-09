@@ -6,17 +6,17 @@ html, body {
 /* ====================== Search ====================== */
 #search {
   width: 100vw;
-	height:7vh;
+  height: 7vh;
 }
 /* ====================== Input ====================== */
 #input {
-  width: 100%;  
+  width: 100%;
   height: 100%;
   padding: 20px 20px;
 }
 /* ====================== Leftcolumn ====================== */
 #leftcolumn {
-  width: 30%;  
+  width: 30%;
   height: 100vh;
   position: fixed;
   margin: 0;
@@ -25,18 +25,17 @@ html, body {
   overflow: auto;
 }
 /* ====================== List ====================== */
-.poi {  
+.poi {
   cursor: pointer;
-  border: 1px solid grey;  
+  border: 1px solid grey;
   margin: 10px;
   padding: 10px;
   list-style: none;
-  background-color: #fff; 
-  
+  background-color: #fff;
 }
 /* ====================== Map ====================== */
 #map {
-  width:70%;
+  width: 70%;
   float: right;
   height: 100vh;
 }
