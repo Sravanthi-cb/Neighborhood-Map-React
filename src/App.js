@@ -100,9 +100,9 @@ class App extends Component {
 
       const content = (
         `
-        <h3>Name:  ${poi.venue.name}  </h3> 
-        <p>Address: ${poi.venue.location.address} </p>
-        <p> ${poi.venue.location.city} ${poi.venue.location.state} ${poi.venue.location.postalCode} </p>
+        <h3 tabIndex="0">Name:  ${poi.venue.name}  </h3> 
+        <p tabIndex="0">Address: ${poi.venue.location.address} </p>
+        <p tabIndex="0"> ${poi.venue.location.city} ${poi.venue.location.state} ${poi.venue.location.postalCode} </p>
       `
       )
 
@@ -161,7 +161,7 @@ class App extends Component {
           <div id="search">
             <Row>
               <Col>
-                <input
+                <input aria-labelledby="search"
                   id="input"
                   placeholder="Enter text to filter"
                   ref={input => this.search = input}
@@ -197,7 +197,13 @@ function loadScript(url) {
   script.src = url
   script.async = true
   script.defere = true
-  script.onerror = (error) => alert(error)
+  script.onerror = (error) => {    
+    const msg = 'Error loading ' + error.target.src    
+    alert(msg)
+  }
+  // define global function to handle authentication failures with google API
+  window.gm_authFailure = () => { alert('Google map authentication failed.')}
+
   index.parentNode.insertBefore(script, index)
 }
 

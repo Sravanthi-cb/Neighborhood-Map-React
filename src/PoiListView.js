@@ -17,7 +17,7 @@ const PoiListView = ({ state: { pois, map, filteredPois } }) => {
   return (
     <div id="list">
       {filteredPois.map((poi) =>
-        <div
+        <div role="button" tabindex="0" 
           className="poi"
           key={poi}
           onClick={(event) => handleClick(event, poi)}>

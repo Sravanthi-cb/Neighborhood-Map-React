@@ -23,6 +23,7 @@ html, body {
   padding: 0;
   background-color: #02b3e4;
   overflow: auto;
+  word-wrap: break-word;
 }
 /* ====================== List ====================== */
 .poi {
