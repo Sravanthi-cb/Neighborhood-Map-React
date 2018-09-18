@@ -2,18 +2,20 @@
   "name": "neighborhood-map-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Sravanthi-cb.github.io/Neighborhood-Map-React/",
   "dependencies": {
-    "axios": "^0.18.0",
-    "gh-pages": "^2.0.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-scripts": "1.1.5",
-    "reactstrap": "^6.4.0"
+    "reactstrap": "^6.4.0",
+    "axios": "^0.18.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   }
 }
