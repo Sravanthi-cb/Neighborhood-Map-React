@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://Sravanthi-cb.github.io/Neighborhood-Map-React/",
   "dependencies": {
+    "gh-pages": "^1.1.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-scripts": "1.1.5",
